@@ -8,439 +8,317 @@
     <Head title="Dashboard"/>
 
     <AuthenticatedLayout>
-            <!-- start page title -->
+
+        <div class="page-body">
             <div class="row">
-                            <div class="col-12">
-                                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                    <h4 class="mb-sm-0">Dashboard</h4>
 
-                                    <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Upcube</a></li>
-                                            <li class="breadcrumb-item active">Dashboard</li>
-                                        </ol>
-                                    </div>
-
-                                </div>
-                            </div>
-            </div>
-            <!-- end page title -->
-
-            <div class="row">
+                <!-- task, page, download counter  start -->
                 <div class="col-xl-3 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex">
-                                <div class="flex-grow-1">
-                                    <p class="text-truncate font-size-14 mb-2">Total Sales</p>
-                                    <h4 class="mb-2">1452</h4>
-                                    <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i
-                                                class="ri-arrow-right-up-line me-1 align-middle"></i>9.23%</span>from
-                                        previous period</p>
+                    <div class="card bg-c-yellow update-card">
+                        <div class="card-block">
+                            <div class="row align-items-end">
+                                <div class="col-8">
+                                    <h4 class="text-white">$30200</h4>
+                                    <h6 class="text-white m-b-0">All Earnings</h6>
                                 </div>
-                                <div class="avatar-sm">
-                                    <span class="avatar-title bg-light text-primary rounded-3">
-                                        <i class="ri-shopping-cart-2-line font-size-24"></i>
-                                    </span>
+                                <div class="col-4 text-right">
+                                    <canvas id="update-chart-1" height="50"></canvas>
                                 </div>
-                            </div>
-                        </div><!-- end cardbody -->
-                    </div><!-- end card -->
-                </div><!-- end col -->
-                <div class="col-xl-3 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex">
-                                <div class="flex-grow-1">
-                                    <p class="text-truncate font-size-14 mb-2">New Orders</p>
-                                    <h4 class="mb-2">938</h4>
-                                    <p class="text-muted mb-0"><span class="text-danger fw-bold font-size-12 me-2"><i
-                                                class="ri-arrow-right-down-line me-1 align-middle"></i>1.09%</span>from
-                                        previous period</p>
-                                </div>
-                                <div class="avatar-sm">
-                                    <span class="avatar-title bg-light text-success rounded-3">
-                                        <i class="mdi mdi-currency-usd font-size-24"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div><!-- end cardbody -->
-                    </div><!-- end card -->
-                </div><!-- end col -->
-                <div class="col-xl-3 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex">
-                                <div class="flex-grow-1">
-                                    <p class="text-truncate font-size-14 mb-2">New Users</p>
-                                    <h4 class="mb-2">8246</h4>
-                                    <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i
-                                                class="ri-arrow-right-up-line me-1 align-middle"></i>16.2%</span>from
-                                        previous period</p>
-                                </div>
-                                <div class="avatar-sm">
-                                    <span class="avatar-title bg-light text-primary rounded-3">
-                                        <i class="ri-user-3-line font-size-24"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div><!-- end cardbody -->
-                    </div><!-- end card -->
-                </div><!-- end col -->
-                <div class="col-xl-3 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex">
-                                <div class="flex-grow-1">
-                                    <p class="text-truncate font-size-14 mb-2">Unique Visitors</p>
-                                    <h4 class="mb-2">29670</h4>
-                                    <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i
-                                                class="ri-arrow-right-up-line me-1 align-middle"></i>11.7%</span>from
-                                        previous period</p>
-                                </div>
-                                <div class="avatar-sm">
-                                    <span class="avatar-title bg-light text-success rounded-3">
-                                        <i class="mdi mdi-currency-btc font-size-24"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div><!-- end cardbody -->
-                    </div><!-- end card -->
-                </div><!-- end col -->
-            </div><!-- end row -->
-
-            <div class="row">
-                <div class="col-xl-6">
-
-                    <div class="card">
-                        <div class="card-body pb-0">
-                            <div class="float-end d-none d-md-inline-block">
-                                <div class="dropdown card-header-dropdown">
-                                    <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        <span class="text-muted">Report<i class="mdi mdi-chevron-down ms-1"></i></span>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-end">
-                                        <a class="dropdown-item" href="#">Export</a>
-                                        <a class="dropdown-item" href="#">Import</a>
-                                        <a class="dropdown-item" href="#">Download Report</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4 class="card-title mb-4">Email Sent</h4>
-
-                            <div class="text-center pt-3">
-                                <div class="row">
-                                    <div class="col-sm-4 mb-3 mb-sm-0">
-                                        <div class="d-inline-flex">
-                                            <h5 class="me-2">25,117</h5>
-                                            <div class="text-success font-size-12">
-                                                <i class="mdi mdi-menu-up font-size-14"> </i>2.2 %
-                                            </div>
-                                        </div>
-                                        <p class="text-muted text-truncate mb-0">Marketplace</p>
-                                    </div><!-- end col -->
-                                    <div class="col-sm-4 mb-3 mb-sm-0">
-                                        <div class="d-inline-flex">
-                                            <h5 class="me-2">$34,856</h5>
-                                            <div class="text-success font-size-12">
-                                                <i class="mdi mdi-menu-up font-size-14"> </i>1.2 %
-                                            </div>
-                                        </div>
-                                        <p class="text-muted text-truncate mb-0">Last Week</p>
-                                    </div><!-- end col -->
-                                    <div class="col-sm-4">
-                                        <div class="d-inline-flex">
-                                            <h5 class="me-2">$18,225</h5>
-                                            <div class="text-success font-size-12">
-                                                <i class="mdi mdi-menu-up font-size-14"> </i>1.7 %
-                                            </div>
-                                        </div>
-                                        <p class="text-muted text-truncate mb-0">Last Month</p>
-                                    </div><!-- end col -->
-                                </div><!-- end row -->
                             </div>
                         </div>
-                        <div class="card-body py-0 px-2">
-                            <div id="area_chart" class="apex-charts" dir="ltr"></div>
+                        <div class="card-footer">
+                            <p class="text-white m-b-0"><i
+                                    class="feather icon-clock text-white f-14 m-r-10"></i>update
+                                : 2:15 am</p>
                         </div>
-                    </div><!-- end card -->
+                    </div>
                 </div>
-                <!-- end col -->
-                <div class="col-xl-6">
-                    <div class="card">
-                        <div class="card-body pb-0">
-                            <div class="float-end d-none d-md-inline-block">
-                                <div class="dropdown">
-                                    <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        <span class="text-muted">This Years<i
-                                                class="mdi mdi-chevron-down ms-1"></i></span>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-end">
-                                        <a class="dropdown-item" href="#">Today</a>
-                                        <a class="dropdown-item" href="#">Last Week</a>
-                                        <a class="dropdown-item" href="#">Last Month</a>
-                                        <a class="dropdown-item" href="#">This Year</a>
-                                    </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="card bg-c-green update-card">
+                        <div class="card-block">
+                            <div class="row align-items-end">
+                                <div class="col-8">
+                                    <h4 class="text-white">290+</h4>
+                                    <h6 class="text-white m-b-0">Page Views</h6>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <canvas id="update-chart-2" height="50"></canvas>
                                 </div>
                             </div>
-                            <h4 class="card-title mb-4">Revenue</h4>
-
-                            <div class="text-center pt-3">
-                                <div class="row">
-                                    <div class="col-sm-4 mb-3 mb-sm-0">
-                                        <div>
-                                            <h5>17,493</h5>
-                                            <p class="text-muted text-truncate mb-0">Marketplace</p>
-                                        </div>
-                                    </div><!-- end col -->
-                                    <div class="col-sm-4 mb-3 mb-sm-0">
-                                        <div>
-                                            <h5>$44,960</h5>
-                                            <p class="text-muted text-truncate mb-0">Last Week</p>
-                                        </div>
-                                    </div><!-- end col -->
-                                    <div class="col-sm-4">
-                                        <div>
-                                            <h5>$29,142</h5>
-                                            <p class="text-muted text-truncate mb-0">Last Month</p>
-                                        </div>
-                                    </div><!-- end col -->
-                                </div><!-- end row -->
-                            </div>
                         </div>
-                        <div class="card-body py-0 px-2">
-                            <div id="column_line_chart" class="apex-charts" dir="ltr"></div>
+                        <div class="card-footer">
+                            <p class="text-white m-b-0"><i
+                                    class="feather icon-clock text-white f-14 m-r-10"></i>update
+                                : 2:15 am</p>
                         </div>
-                    </div><!-- end card -->
+                    </div>
                 </div>
-                <!-- end col -->
-            </div>
-            <!-- end row -->
-
-            <div class="row">
-                <div class="col-xl-8">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="dropdown float-end">
-                                <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <i class="mdi mdi-dots-vertical"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-end">
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item">Profit</a>
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                <div class="col-xl-3 col-md-6">
+                    <div class="card bg-c-pink update-card">
+                        <div class="card-block">
+                            <div class="row align-items-end">
+                                <div class="col-8">
+                                    <h4 class="text-white">145</h4>
+                                    <h6 class="text-white m-b-0">Task Completed</h6>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <canvas id="update-chart-3" height="50"></canvas>
                                 </div>
                             </div>
+                        </div>
+                        <div class="card-footer">
+                            <p class="text-white m-b-0"><i
+                                    class="feather icon-clock text-white f-14 m-r-10"></i>update
+                                : 2:15 am</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="card bg-c-lite-green update-card">
+                        <div class="card-block">
+                            <div class="row align-items-end">
+                                <div class="col-8">
+                                    <h4 class="text-white">500</h4>
+                                    <h6 class="text-white m-b-0">Downloads</h6>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <canvas id="update-chart-4" height="50"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <p class="text-white m-b-0"><i
+                                    class="feather icon-clock text-white f-14 m-r-10"></i>update
+                                : 2:15 am</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- task, page, download counter  end -->
 
-                            <h4 class="card-title mb-4">Latest Transactions</h4>
+                
+                <!--  sale analytics start -->
+                <div class="col-xl-9 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Sales Analytics</h5>
+                            <span class="text-muted">For more details about usage,
+                                please refer <a
+                                    href="https://www.amcharts.com/online-store/"
+                                    target="_blank">amCharts</a> licences.</span>
+                            <div class="card-header-right">
+                                <ul class="list-unstyled card-option">
+                                    <li><i class="feather icon-maximize full-card"></i>
+                                    </li>
+                                    <li><i class="feather icon-minus minimize-card"></i>
+                                    </li>
+                                    <li><i class="feather icon-trash-2 close-card"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <div id="sales-analytics" style="height: 265px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-12">
+                    <div class="card user-card2">
+                        <div class="card-block text-center">
+                            <h6 class="m-b-15">Project Risk</h6>
+                            <div class="risk-rate">
+                                <span><b>5</b></span>
+                            </div>
+                            <h6 class="m-b-10 m-t-10">Balanced</h6>
+                            <a href="#!" class="text-c-yellow b-b-warning">Change Your
+                                Risk</a>
+                            <div
+                                class="row justify-content-center m-t-10 b-t-default m-l-0 m-r-0">
+                                <div class="col m-t-15 b-r-default">
+                                    <h6 class="text-muted">Nr</h6>
+                                    <h6>AWS 2455</h6>
+                                </div>
+                                <div class="col m-t-15">
+                                    <h6 class="text-muted">Created</h6>
+                                    <h6>30th Sep</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-warning btn-block p-t-15 p-b-15">Download
+                            Overall Report</button>
+                    </div>
+                </div>
 
+
+                <!--  sale analytics end -->
+                <div class="col-xl-12 col-md-12">
+                    <div class="card table-card">
+                        <div class="card-header">
+                            <h5>Application Sales</h5>
+                            <div class="card-header-right">
+                                <ul class="list-unstyled card-option">
+                                    <li><i class="feather icon-maximize full-card"></i>
+                                    </li>
+                                    <li><i class="feather icon-minus minimize-card"></i>
+                                    </li>
+                                    <li><i class="feather icon-trash-2 close-card"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-block">
                             <div class="table-responsive">
-                                <table class="table table-centered mb-0 align-middle table-hover table-nowrap">
-                                    <thead class="table-light">
+                                <table class="table table-hover  table-borderless">
+                                    <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Status</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th style="width: 120px;">Salary</th>
+                                            <th>
+                                                <div class="chk-option">
+                                                    <div
+                                                        class="checkbox-fade fade-in-primary">
+                                                        <label class="check-task">
+                                                            <input type="checkbox"
+                                                                value="">
+                                                            <span class="cr">
+                                                                <i
+                                                                    class="cr-icon feather icon-check txt-default"></i>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                Application
+                                            </th>
+                                            <th>Sales</th>
+                                            <th>Change</th>
+                                            <th>Avg Price</th>
+                                            <th>Total</th>
                                         </tr>
-                                    </thead><!-- end thead -->
+                                    </thead>
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <h6 class="mb-0">Charles Casey</h6>
-                                            </td>
-                                            <td>Web Developer</td>
-                                            <td>
-                                                <div class="font-size-13"><i
-                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active
+                                                <div class="chk-option">
+                                                    <div
+                                                        class="checkbox-fade fade-in-primary">
+                                                        <label class="check-task">
+                                                            <input type="checkbox"
+                                                                value="">
+                                                            <span class="cr">
+                                                                <i
+                                                                    class="cr-icon feather icon-check txt-default"></i>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-inline-block align-middle">
+                                                    <h6>Able Pro</h6>
+                                                    <p class="text-muted m-b-0">Powerful
+                                                        Admin Theme</p>
                                                 </div>
                                             </td>
-                                            <td>
-                                                23
-                                            </td>
-                                            <td>
-                                                04 Apr, 2021
-                                            </td>
-                                            <td>$42,450</td>
+                                            <td>16,300</td>
+                                            <td><canvas id="app-sale1" height="50"
+                                                    width="100"></canvas></td>
+                                            <td>$53</td>
+                                            <td class="text-c-blue">$15,652</td>
                                         </tr>
-                                        <!-- end -->
                                         <tr>
                                             <td>
-                                                <h6 class="mb-0">Alex Adams</h6>
-                                            </td>
-                                            <td>Python Developer</td>
-                                            <td>
-                                                <div class="font-size-13"><i
-                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-warning align-middle me-2"></i>Deactive
+                                                <div class="chk-option">
+                                                    <div
+                                                        class="checkbox-fade fade-in-primary">
+                                                        <label class="check-task">
+                                                            <input type="checkbox"
+                                                                value="">
+                                                            <span class="cr">
+                                                                <i
+                                                                    class="cr-icon feather icon-check txt-default"></i>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-inline-block align-middle">
+                                                    <h6>Photoshop</h6>
+                                                    <p class="text-muted m-b-0">Design
+                                                        Software</p>
                                                 </div>
                                             </td>
-                                            <td>
-                                                28
-                                            </td>
-                                            <td>
-                                                01 Aug, 2021
-                                            </td>
-                                            <td>$25,060</td>
+                                            <td>26,421</td>
+                                            <td><canvas id="app-sale2" height="50"
+                                                    width="100"></canvas></td>
+                                            <td>$35</td>
+                                            <td class="text-c-blue">$18,785</td>
                                         </tr>
-                                        <!-- end -->
                                         <tr>
                                             <td>
-                                                <h6 class="mb-0">Prezy Kelsey</h6>
-                                            </td>
-                                            <td>Senior Javascript Developer</td>
-                                            <td>
-                                                <div class="font-size-13"><i
-                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active
+                                                <div class="chk-option">
+                                                    <div
+                                                        class="checkbox-fade fade-in-primary">
+                                                        <label class="check-task">
+                                                            <input type="checkbox"
+                                                                value="">
+                                                            <span class="cr">
+                                                                <i
+                                                                    class="cr-icon feather icon-check txt-default"></i>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-inline-block align-middle">
+                                                    <h6>Guruable</h6>
+                                                    <p class="text-muted m-b-0">Best
+                                                        Admin Template</p>
                                                 </div>
                                             </td>
-                                            <td>
-                                                35
-                                            </td>
-                                            <td>
-                                                15 Jun, 2021
-                                            </td>
-                                            <td>$59,350</td>
+                                            <td>8,265</td>
+                                            <td><canvas id="app-sale3" height="50"
+                                                    width="100"></canvas></td>
+                                            <td>$98</td>
+                                            <td class="text-c-blue">$9,652</td>
                                         </tr>
-                                        <!-- end -->
                                         <tr>
                                             <td>
-                                                <h6 class="mb-0">Ruhi Fancher</h6>
-                                            </td>
-                                            <td>React Developer</td>
-                                            <td>
-                                                <div class="font-size-13"><i
-                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active
+                                                <div class="chk-option">
+                                                    <div
+                                                        class="checkbox-fade fade-in-primary">
+                                                        <label class="check-task">
+                                                            <input type="checkbox"
+                                                                value="">
+                                                            <span class="cr">
+                                                                <i
+                                                                    class="cr-icon feather icon-check txt-default"></i>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="d-inline-block align-middle">
+                                                    <h6>Flatable</h6>
+                                                    <p class="text-muted m-b-0">Admin
+                                                        App</p>
                                                 </div>
                                             </td>
-                                            <td>
-                                                25
-                                            </td>
-                                            <td>
-                                                01 March, 2021
-                                            </td>
-                                            <td>$23,700</td>
+                                            <td>10,652</td>
+                                            <td><canvas id="app-sale4" height="50"
+                                                    width="100"></canvas></td>
+                                            <td>$20</td>
+                                            <td class="text-c-blue">$7,856</td>
                                         </tr>
-                                        <!-- end -->
-                                        <tr>
-                                            <td>
-                                                <h6 class="mb-0">Juliet Pineda</h6>
-                                            </td>
-                                            <td>Senior Web Designer</td>
-                                            <td>
-                                                <div class="font-size-13"><i
-                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active
-                                                </div>
-                                            </td>
-                                            <td>
-                                                38
-                                            </td>
-                                            <td>
-                                                01 Jan, 2021
-                                            </td>
-                                            <td>$69,185</td>
-                                        </tr>
-                                        <!-- end -->
-                                        <tr>
-                                            <td>
-                                                <h6 class="mb-0">Den Simpson</h6>
-                                            </td>
-                                            <td>Web Designer</td>
-                                            <td>
-                                                <div class="font-size-13"><i
-                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-warning align-middle me-2"></i>Deactive
-                                                </div>
-                                            </td>
-                                            <td>
-                                                21
-                                            </td>
-                                            <td>
-                                                01 Sep, 2021
-                                            </td>
-                                            <td>$37,845</td>
-                                        </tr>
-                                        <!-- end -->
-                                        <tr>
-                                            <td>
-                                                <h6 class="mb-0">Mahek Torres</h6>
-                                            </td>
-                                            <td>Senior Laravel Developer</td>
-                                            <td>
-                                                <div class="font-size-13"><i
-                                                        class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active
-                                                </div>
-                                            </td>
-                                            <td>
-                                                32
-                                            </td>
-                                            <td>
-                                                20 May, 2021
-                                            </td>
-                                            <td>$55,100</td>
-                                        </tr>
-                                        <!-- end -->
-                                    </tbody><!-- end tbody -->
-                                </table> <!-- end table -->
-                            </div>
-                        </div><!-- end card -->
-                    </div><!-- end card -->
-                </div>
-                <!-- end col -->
-                <div class="col-xl-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="float-end">
-                                <select class="form-select shadow-none form-select-sm">
-                                    <option selected>Apr</option>
-                                    <option value="1">Mar</option>
-                                    <option value="2">Feb</option>
-                                    <option value="3">Jan</option>
-                                </select>
-                            </div>
-                            <h4 class="card-title mb-4">Monthly Earnings</h4>
-
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="text-center mt-4">
-                                        <h5>3475</h5>
-                                        <p class="mb-2 text-truncate">Market Place</p>
-                                    </div>
+                                    </tbody>
+                                </table>
+                                <div class="text-center">
+                                    <a href="#!" class=" b-b-primary text-primary">View
+                                        all Projects</a>
                                 </div>
-                                <!-- end col -->
-                                <div class="col-4">
-                                    <div class="text-center mt-4">
-                                        <h5>458</h5>
-                                        <p class="mb-2 text-truncate">Last Week</p>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-4">
-                                    <div class="text-center mt-4">
-                                        <h5>9062</h5>
-                                        <p class="mb-2 text-truncate">Last Month</p>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                            </div>
-                            <!-- end row -->
-
-                            <div class="mt-4">
-                                <div id="donut-chart" class="apex-charts"></div>
                             </div>
                         </div>
-                    </div><!-- end card -->
-                </div><!-- end col -->
+                    </div>
+                </div>
+
             </div>
-            <!-- end row -->
+        </div>
+        
     </AuthenticatedLayout>
 
 </template>

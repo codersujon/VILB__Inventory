@@ -1,76 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-    <head>
-        
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title inertia>{{ config('app.name', 'Laravel') }}</title>
-        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-        <meta content="Themesdesign" name="author" />
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('backend')}}/assets/images/favicon.ico">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="#">
+    <meta name="keywords" content="">
+    <meta name="author" content="#">
 
-        <!-- jquery.vectormap css -->
-        <link href="{{asset('backend')}}/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+    <title inertia>{{ config('app.name', 'Laravel') }}</title>
+   
+    <!-- Favicon icon -->
+    <link rel="icon" href="{{ asset('backend') }}/files/assets/images/favicon.ico" type="image/x-icon">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('backend') }}/files/bower_components/bootstrap/css/bootstrap.min.css">
+    <!-- feather Awesome -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('backend') }}/files/assets/icon/feather/css/feather.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('backend') }}/files/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('backend') }}/files/assets/css/jquery.mCustomScrollbar.css">
 
-        <!-- DataTables -->
-        <link href="{{asset('backend')}}/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+     <!-- Scripts -->
+     @routes
+     @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
+     @inertiaHead
 
-        <!-- Responsive datatable examples -->
-        <link href="{{asset('backend')}}/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />  
+</head>
 
-        <!-- Bootstrap Css -->
-        <link href="{{asset('backend')}}/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
-        <!-- Icons Css -->
-        <link href="{{asset('backend')}}/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-        <!-- App Css-->
-        <link href="{{asset('backend')}}/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+<body>
 
-         <!-- Scripts -->
-         @routes
-         @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
-         @inertiaHead
-
-    </head>
-
-    <body data-topbar="dark">
-    
-
-       
-
-       
+    @inertia
 
 
-        <!-- JAVASCRIPT -->
-        <script src="{{asset('backend')}}/assets/libs/jquery/jquery.min.js"></script>
-        <script src="{{asset('backend')}}/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="{{asset('backend')}}/assets/libs/metismenu/metisMenu.min.js"></script>
-        <script src="{{asset('backend')}}/assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="{{asset('backend')}}/assets/libs/node-waves/waves.min.js"></script>
+    <!-- Required Jquery -->
+    <script type="text/javascript" src="{{ asset('backend') }}/files/bower_components/jquery/js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('backend') }}/files/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="{{ asset('backend') }}/files/bower_components/popper.js/js/popper.min.js"></script>
+    <script type="text/javascript" src="{{ asset('backend') }}/files/bower_components/bootstrap/js/bootstrap.min.js"></script>
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="{{ asset('backend') }}/files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+    <!-- modernizr js -->
+    <script type="text/javascript" src="{{ asset('backend') }}/files/bower_components/modernizr/js/modernizr.js"></script>
+    <!-- Chart js -->
+    <script type="text/javascript" src="{{ asset('backend') }}/files/bower_components/chart.js/js/Chart.js"></script>
+    <!-- amchart js -->
+    <script src="{{ asset('backend') }}/files/assets/pages/widget/amchart/amcharts.js"></script>
+    <script src="{{ asset('backend') }}/files/assets/pages/widget/amchart/serial.js"></script>
+    <script src="{{ asset('backend') }}/files/assets/pages/widget/amchart/light.js"></script>
+    <script src="{{ asset('backend') }}/files/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="{{ asset('backend') }}/files/assets/js/SmoothScroll.js"></script>
+    <script src="{{ asset('backend') }}/files/assets/js/pcoded.min.js"></script>
+    <!-- custom js -->
+    <script src="{{ asset('backend') }}/files/assets/js/vartical-layout.min.js"></script>
+    <script type="text/javascript" src="{{ asset('backend') }}/files/assets/pages/dashboard/custom-dashboard.js"></script>
+    <script type="text/javascript" src="{{ asset('backend') }}/files/assets/js/script.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-        
-        <!-- apexcharts -->
-        <script src="{{asset('backend')}}/assets/libs/apexcharts/apexcharts.min.js"></script>
-
-        <!-- jquery.vectormap map -->
-        <script src="{{asset('backend')}}/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
-        <script src="{{asset('backend')}}/assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js"></script>
-
-        <!-- Required datatable js -->
-        <script src="{{asset('backend')}}/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-        <script src="{{asset('backend')}}/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-        
-        <!-- Responsive examples -->
-        <script src="{{asset('backend')}}/assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-        <script src="{{asset('backend')}}/assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-
-        <script src="{{asset('backend')}}/assets/js/pages/dashboard.init.js"></script>
-
-        <!-- App js -->
-        <script src="{{asset('backend')}}/assets/js/app.js"></script>
-
-        @inertia
-    </body>
+        gtag('config', 'UA-23581568-13');
+    </script>
+</body>
 
 </html>

@@ -1,52 +1,49 @@
 <script setup>
-    import { Link } from '@inertiajs/vue3'
 </script>
 
 <template>
-    <div class="vertical-menu">
-        <div data-simplebar class="h-100">
+    <nav class="pcoded-navbar">
+        <div class="pcoded-inner-navbar main-menu">
+            <ul class="pcoded-item pcoded-left-item">
 
-            <!-- User details -->
-            <div class="user-profile text-center mt-3">
-                <div class="">
-                    <img src="../../../public/backend/assets/images/users/avatar-1.jpg" alt=""
-                        class="avatar-md rounded-circle">
-                </div>
-                <div class="mt-3">
-                    <h4 class="font-size-16 mb-1">Julia Hudda</h4>
-                    <span class="text-muted"><i
-                            class="ri-record-circle-line align-middle font-size-14 text-success"></i>
-                        Online</span>
-                </div>
-            </div>
+                <li class="">
+                    <a href="navbar-light.htm">
+                        <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                        <span class="pcoded-mtext">Dashboard</span>
+                    </a>
+                </li>
 
-            <!--- Sidemenu -->
-            <div id="sidebar-menu">
-                <!-- Left Menu Start -->
-                <ul class="metismenu list-unstyled" id="side-menu">
-                    <li class="menu-title">Menu</li>
-
-                    <li>
-                        <Link :href="route('dashboard')" class="waves-effect">
-                            <i class="ri-dashboard-line"></i>
-                            <span>Dashboard</span>
-                        </Link>
-                    </li>
-
-                    <li>
-                        <a href="javascript: void(0);" class="has-arrow waves-effect">
-                            <i class="ri-mail-send-line"></i>
-                            <span>Email</span>
-                        </a>
-                        <ul class="sub-menu" aria-expanded="false">
-                            <li><a href="email-inbox.html">Inbox</a></li>
-                            <li><a href="email-read.html">Read Email</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </div>
-            <!-- Sidebar -->
+            </ul>
+            <ul class="pcoded-item pcoded-left-item">
+                <li class="pcoded-hasmenu">
+                    <a href="javascript:void(0)">
+                        <span class="pcoded-micon"><i class="feather icon-clipboard"></i></span>
+                        <span class="pcoded-mtext">Form Components</span>
+                    </a>
+                    <ul class="pcoded-submenu">
+                        <li class=" ">
+                            <a href="form-elements-component.htm">
+                                <span class="pcoded-mtext">Form Components</span>
+                            </a>
+                        </li>
+                        <li class=" ">
+                            <a href="form-elements-add-on.htm">
+                                <span class="pcoded-mtext">Form-Elements-Add-On</span>
+                            </a>
+                        </li>
+                        <li class=" ">
+                            <a href="form-elements-advance.htm">
+                                <span class="pcoded-mtext">Form-Elements-Advance</span>
+                            </a>
+                        </li>
+                        <li class=" ">
+                            <a href="form-validation.htm">
+                                <span class="pcoded-mtext">Form Validation</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-    </div>
+    </nav>
 </template>
