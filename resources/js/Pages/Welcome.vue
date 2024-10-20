@@ -1,10 +1,11 @@
 <script setup>
-    import { Head } from '@inertiajs/vue3';
+    import { Head, Link } from '@inertiajs/vue3';
 </script>
 <template>
     <Head title="Welcome"/>
-    <div class="d-flex vh-100 align-items-center justify-content-center">
-        <h1 class="display-2 text-center text-primary">Home Page</h1>
+    <div class="my-5 text-center">
+        <Link :href="route('login')" class="btn btn-primary mx-2">Login</Link>
+        <Link :href="route('register')" class="btn btn-info mx-2">Register</Link>
     </div>
 </template>
 

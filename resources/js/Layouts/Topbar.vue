@@ -10,9 +10,11 @@
                 <a class="mobile-menu" id="mobile-collapse" href="#!">
                     <i class="feather icon-menu"></i>
                 </a>
-                <a href="index-1.htm">
+                
+                <Link :href="route('dashboard')">
                     <img class="img-fluid" src="../../../public/backend/files/assets/images/logo.png" alt="Theme-Logo">
-                </a>
+                </Link>
+
                 <a class="mobile-options">
                     <i class="feather icon-more-horizontal"></i>
                 </a>
